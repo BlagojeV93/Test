@@ -50,7 +50,6 @@ const App = () => {
         fetch(singleStoryUrl(res[id])).then(res => res.json())
       );
       const newStories = await Promise.all(fetchStories);
-      setStories(stories)
       if (fetchMore) {
         setStories([...stories, ...newStories])
       } else {
