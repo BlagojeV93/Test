@@ -28,7 +28,6 @@ const App = () => {
 
   // handling loading more content after pagination change
   useEffect(() => {
-    console.log(stories.length)
     if (stories.length > 0) {
       if (pagination.end > stories.length) {
         getTopStories(true);
